@@ -9,4 +9,5 @@
 - Rules for error messages that always state the next step and FAQ answers that answer the question directly.
 - Examples drawn from e-commerce, payments, booking, education, health and SaaS apps.
 - Plugin manifest (`.claude-plugin/plugin.json`) and marketplace entry.
+- GitHub Actions CI that validates the plugin, lints the scripts with ShellCheck and smoke-tests them.
 - `evals/` with quality cases (including a 30-file repo and an Android project) and 20 triggering cases for `claude plugin eval`.

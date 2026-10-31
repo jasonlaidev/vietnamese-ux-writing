@@ -1,5 +1,6 @@
 # Vietnamese UX Writing
 
+[![CI](https://github.com/jasonlaidev/vietnamese-ux-writing/actions/workflows/ci.yml/badge.svg)](https://github.com/jasonlaidev/vietnamese-ux-writing/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0-informational.svg)](CHANGELOG.md)
 
