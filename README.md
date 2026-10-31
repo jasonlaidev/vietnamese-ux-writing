@@ -14,6 +14,7 @@ It teaches AI coding agents (Claude Code and other tools that read `SKILL.md`) t
 
 - [Before and after](#before-and-after)
 - [Features](#features)
+- [Scope and stance](#scope-and-stance)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Evaluation](#evaluation)
@@ -54,6 +55,15 @@ The writing rules apply to any stack. The bundled scripts read these sources:
 For other languages, pass extra extensions with `EXTRA_EXT="lua cfm"`.
 
 The scripts use POSIX/ERE grep only and run on macOS (BSD grep) and Linux (GNU grep).
+
+## Scope and stance
+
+- **Where the rules come from.** They were distilled from reviewing copy in real products: each rule records wording that a reviewer rejected and the replacement that was accepted. They reflect one practice, not an industry standard or user research.
+- **Formal, neutral tone.** The skill favors complete sentences, "Vui lòng" in error messages, no particles such as "nhé" or "nha", and no emoji. This suits commerce, fintech, booking, education, health and business software. Apps that deliberately use a casual voice, such as games, social apps or products for teenagers, should adjust or skip those rules.
+- **Not yet rated by independent readers.** The evaluation checks concrete rules. No native Vietnamese reader outside the project has rated how natural the output sounds, so watch for copy that reads stiff or bureaucratic.
+- **Written with AI assistance.** The skill was drafted and tested with Claude, then reviewed by the author.
+
+Feedback that a rule sounds unnatural in your product is welcome as an issue.
 
 ## Installation
 
