@@ -106,6 +106,28 @@ claude plugin eval . --case 'review-*' --scaffold --allow-tools Write Edit
 claude plugin eval . --case 'write-*' --allow-tools Write Edit
 ```
 
+### Latest results
+
+Measured on 2026-10-31 at commit `26121b8` with Claude Code 2.1.316, Claude Opus 5.5 and 3 runs per arm. Each score is the share of graders passed, averaged over the 3 runs.
+
+| Quality case | With skill | Without skill |
+|---|---|---|
+| `write-expense-app-copy` | 100% | 59% |
+| `review-pricing-page` | 100% | 67% |
+| `review-android-project` | 100% | 83% |
+| `review-large-repo` (30 files) | 99% | 95% |
+| `review-settings-strings` | 100% | 91% |
+| **Mean** | **99.8%** | **79%** |
+
+Triggering: 60 of 60 runs were correct. The skill loaded in all 30 runs that should load it and in none of the 30 that should not.
+
+Limits of these numbers:
+
+- Review cases ran with `--allow-tools Write Edit` and no Bash, so the bundled scripts were not measured.
+- Graders check concrete rules. No native Vietnamese reader rated how natural the copy sounds.
+- The cases were written alongside the skill, so they favor the rules it teaches. Treat the gap as evidence that the rules are applied, not as a general quality score.
+- These scores describe the commit above. Rerun the evals after changing the skill.
+
 ## Contributing
 
 Issues and pull requests are welcome. For a new rule, include the current wording, the proposed wording and the reason, and add it to the matching file in `references/`. Keep examples generic: no customer names, prices or private content.
