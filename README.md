@@ -1,8 +1,24 @@
 # Vietnamese UX Writing
 
-An agent skill for professional Vietnamese UX writing in web and mobile apps. It teaches AI coding agents (Claude Code and other tools that read `SKILL.md`) to write and review Vietnamese interface text the way a careful product team would: no colloquialisms, no AI-sounding filler, complete error messages, and one consistent set of terms and spelling across the product.
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.0-informational.svg)](CHANGELOG.md)
 
-Agent skill giúp AI viết và rà soát chữ tiếng Việt trong giao diện web và app với giọng chuyên nghiệp: không khẩu ngữ, không sáo rỗng kiểu AI, thông báo lỗi đủ ý, xưng hô và chính tả thống nhất.
+An agent skill for professional Vietnamese UX writing in web and mobile apps.
+
+It teaches AI coding agents (Claude Code and other tools that read `SKILL.md`) to write and review Vietnamese interface text the way a careful product team would: no colloquialisms, no AI-sounding filler, complete error messages, and one consistent set of terms and spelling across the product.
+
+> Agent skill giúp AI viết và rà soát chữ tiếng Việt trong giao diện web và app với giọng chuyên nghiệp: không khẩu ngữ, không sáo rỗng kiểu AI, thông báo lỗi đủ ý, xưng hô và chính tả thống nhất.
+
+## Contents
+
+- [Before and after](#before-and-after)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Evaluation](#evaluation)
+- [Repository structure](#repository-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Before and after
 
@@ -15,14 +31,28 @@ Agent skill giúp AI viết và rà soát chữ tiếng Việt trong giao diện
 | Chính Sách Quyền Riêng Tư | Chính sách quyền riêng tư |
 | xoá · huỷ · khoẻ (mixed with xóa · hủy · khỏe) | xóa · hủy · khỏe |
 
-## What it covers
+## Features
 
-- **Interface text:** buttons, labels, forms, placeholders, error and success messages, empty states, confirm dialogs, push notifications, paywalls.
-- **Product websites:** hero, features, pricing, FAQ, SEO metadata.
+- **Interface text:** buttons, labels, forms, placeholders, error and success messages, empty states, confirm dialogs, push notifications and paywalls.
+- **Product websites:** hero, features, pricing, FAQ and SEO metadata.
 - **Any kind of app:** e-commerce, fintech, booking, education, health, SaaS and internal tools. Examples in the skill are spread across these domains.
-- **Codebase review:** list every Vietnamese string in a project, report findings as `location | current | proposed | reason`, fix them, then run the project's own checks. The bundled scripts read React, Next.js, React Native, Vue, Svelte, Angular, Flutter, iOS, Android, PHP/Laravel, Python/Django, Ruby, Go, .NET, Rust and Elixir sources, plus translation files (`strings.xml`, `.strings`, `.arb`, `.json`, `.yaml`, `.po`, `.xliff`, `.resx`). Other languages: pass extra extensions with `EXTRA_EXT="lua cfm"`. The writing rules themselves apply to any stack.
+- **Codebase review:** list every Vietnamese string in a project, report findings as `location | current | proposed | reason`, fix them, then run the project's own checks.
 
 Out of scope: blogs, emails, social media posts, translation and legal documents.
+
+### Supported stacks
+
+The writing rules apply to any stack. The bundled scripts read these sources:
+
+| Area | Coverage |
+|---|---|
+| Web and mobile | React, Next.js, React Native, Vue, Svelte, Angular, Flutter, iOS, Android |
+| Backend | PHP/Laravel, Python/Django, Ruby, Go, .NET, Rust, Elixir |
+| Translation files | `strings.xml`, `.strings`, `.arb`, `.json`, `.yaml`, `.po`, `.xliff`, `.resx` |
+
+For other languages, pass extra extensions with `EXTRA_EXT="lua cfm"`.
+
+The scripts use POSIX/ERE grep only and run on macOS (BSD grep) and Linux (GNU grep).
 
 ## Installation
 
@@ -35,7 +65,9 @@ Out of scope: blogs, emails, social media posts, translation and legal documents
 
 Update later with `/plugin marketplace update vietnamese-ux-writing`.
 
-### skills CLI (Claude Code, Cursor, Codex, Gemini CLI and other agents)
+### skills CLI
+
+Works with Claude Code, Cursor, Codex, Gemini CLI and other agents.
 
 ```bash
 npx skills add jasonlaidev/vietnamese-ux-writing
@@ -68,31 +100,6 @@ Viết thông báo lỗi khi tải giá gói Premium thất bại.
 Review the Vietnamese strings on the pricing page and make them sound professional.
 ```
 
-## Structure
-
-```
-skills/vietnamese-ux-writing/
-├── SKILL.md                              Principles, workflow, output format
-├── references/
-│   ├── word-replacements.md              Colloquial and English words to replace
-│   ├── microcopy-patterns.md             Patterns per UI element
-│   └── terminology-and-spelling.md       Forms of address, product terms, tone marks, capitalization, numbers, money and dates
-└── scripts/
-    ├── find-vietnamese-strings.sh        List Vietnamese strings in source, template and translation files
-    └── check-tone-marks.sh               Find old-style tone marks (xoá, huỷ, khoẻ); CI-friendly exit code
-```
-
-The scripts use POSIX/ERE grep only and run on macOS (BSD grep) and Linux (GNU grep).
-
-Repository layout around the skill:
-
-```
-.claude-plugin/
-├── plugin.json        Plugin manifest
-└── marketplace.json   Lets `/plugin marketplace add` install from this repo
-evals/                 Test cases for `claude plugin eval` (quality and triggering)
-```
-
 ## Evaluation
 
 The `evals/` folder holds two kinds of cases, run with `claude plugin eval`:
@@ -111,7 +118,7 @@ claude plugin eval . --case 'write-*' --allow-tools Write Edit
 Measured on 2026-10-31 at commit `26121b8` with Claude Code 2.1.316, Claude Opus 5.5 and 3 runs per arm. Each score is the share of graders passed, averaged over the 3 runs.
 
 | Quality case | With skill | Without skill |
-|---|---|---|
+|---|---:|---:|
 | `write-expense-app-copy` | 100% | 59% |
 | `review-pricing-page` | 100% | 67% |
 | `review-android-project` | 100% | 83% |
@@ -121,16 +128,41 @@ Measured on 2026-10-31 at commit `26121b8` with Claude Code 2.1.316, Claude Opus
 
 Triggering: 60 of 60 runs were correct. The skill loaded in all 30 runs that should load it and in none of the 30 that should not.
 
-Limits of these numbers:
+### Limitations
 
 - Review cases ran with `--allow-tools Write Edit` and no Bash, so the bundled scripts were not measured.
 - Graders check concrete rules. No native Vietnamese reader rated how natural the copy sounds.
 - The cases were written alongside the skill, so they favor the rules it teaches. Treat the gap as evidence that the rules are applied, not as a general quality score.
 - These scores describe the commit above. Rerun the evals after changing the skill.
 
+## Repository structure
+
+```
+.
+├── .claude-plugin/
+│   ├── plugin.json                           Plugin manifest
+│   └── marketplace.json                      Lets `/plugin marketplace add` install from this repo
+├── evals/                                    Test cases for `claude plugin eval`
+└── skills/vietnamese-ux-writing/
+    ├── SKILL.md                              Principles, workflow, output format
+    ├── references/
+    │   ├── word-replacements.md              Colloquial and English words to replace
+    │   ├── microcopy-patterns.md             Patterns per UI element
+    │   └── terminology-and-spelling.md       Forms of address, product terms, tone marks, capitalization, numbers, money and dates
+    └── scripts/
+        ├── find-vietnamese-strings.sh        List Vietnamese strings in source, template and translation files
+        └── check-tone-marks.sh               Find old-style tone marks (xoá, huỷ, khoẻ); CI-friendly exit code
+```
+
 ## Contributing
 
-Issues and pull requests are welcome. For a new rule, include the current wording, the proposed wording and the reason, and add it to the matching file in `references/`. Keep examples generic: no customer names, prices or private content.
+Issues and pull requests are welcome. For a new rule:
+
+1. Include the current wording, the proposed wording and the reason.
+2. Add it to the matching file in `references/`.
+3. Keep examples generic: no customer names, prices or private content.
+
+See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## License
 
