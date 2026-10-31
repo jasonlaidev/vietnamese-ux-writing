@@ -1,43 +1,87 @@
-# vietnamese-ux-writing
+# Vietnamese UX Writing
 
-Agent skill (Claude Code và các agent đọc được `SKILL.md`) để viết và rà soát chữ tiếng Việt trong giao diện web và app với giọng chuyên nghiệp: không khẩu ngữ, không sáo rỗng kiểu AI, thông báo lỗi đủ ý, xưng hô và chính tả thống nhất.
+An agent skill for professional Vietnamese UX writing in web and mobile apps. It teaches AI coding agents (Claude Code and other tools that read `SKILL.md`) to write and review Vietnamese interface text the way a careful product team would: no colloquialisms, no AI-sounding filler, complete error messages, and one consistent set of terms and spelling across the product.
 
-*An agent skill for professional Vietnamese UX writing and UI copy in web and mobile apps.*
+Agent skill giúp AI viết và rà soát chữ tiếng Việt trong giao diện web và app với giọng chuyên nghiệp: không khẩu ngữ, không sáo rỗng kiểu AI, thông báo lỗi đủ ý, xưng hô và chính tả thống nhất.
 
-## Dùng cho
+## Before and after
 
-- Chữ trong giao diện: nút, nhãn, form, placeholder, thông báo lỗi, màn hình trống, thông báo đẩy.
-- Trang giới thiệu sản phẩm hoặc dịch vụ: hero, tính năng, bảng giá, FAQ, metadata SEO.
-- Rà soát copy ngay trong mã nguồn (Next.js, Expo/React Native): liệt kê chuỗi tiếng Việt, báo cáo theo bảng `vị trí | hiện tại | đề xuất`, sửa, rồi chạy typecheck, lint và test.
+| Before | After |
+|---|---|
+| Chưa xóa được. Kiểm tra mạng rồi thử lại. | Không thể xóa. Vui lòng kiểm tra kết nối mạng và thử lại. |
+| Trả một lần, dùng mãi | Thanh toán một lần, dùng không thời hạn |
+| Các món đã đổi tay sẽ bị thay. | Các món đã đổi thủ công sẽ được thay thế. |
+| Nên tin số nào? | Nên dựa vào kết quả nào? |
+| Chính Sách Quyền Riêng Tư | Chính sách quyền riêng tư |
+| xoá · huỷ · khoẻ (mixed with xóa · hủy · khỏe) | xóa · hủy · khỏe |
 
-Không dùng cho blog, email, nội dung mạng xã hội, dịch thuật hoặc văn bản pháp lý.
+## What it covers
 
-## Nội dung
+- **Interface text:** buttons, labels, forms, placeholders, error and success messages, empty states, confirm dialogs, push notifications, paywalls.
+- **Product websites:** hero, features, pricing, FAQ, SEO metadata.
+- **Codebase review:** list every Vietnamese string in a Next.js or Expo/React Native project, report findings as `location | current | proposed | reason`, fix them, then run typecheck, lint and tests.
 
-- Nguyên tắc: văn viết thay lời nói, đúng ý trước trang trọng sau, không hứa tuyệt đối, không nói quá.
-- Bảng từ khẩu ngữ cần thay và từ tiếng Anh nên dùng tiếng Việt.
-- Mẫu thông báo lỗi: "Không thể … Vui lòng kiểm tra kết nối mạng và thử lại."
-- Xưng hô: một cách gọi cho cả dự án.
-- Chính tả: một cách đặt dấu thanh (hóa, xóa, khỏe, hủy, tùy), kèm lệnh grep kiểm tra.
-- Ngoại lệ cần giữ nguyên và quy trình rà soát.
+Out of scope: blogs, emails, social media posts, translation and legal documents.
 
-## Cài đặt
+## Installation
 
-Claude Code, dùng cho mọi dự án:
+### Claude Code plugin marketplace
+
+```
+/plugin marketplace add jasonlaidev/vietnamese-ux-writing
+/plugin install vietnamese-ux-writing@vietnamese-ux-writing
+```
+
+### skills CLI
+
+```bash
+npx skills add jasonlaidev/vietnamese-ux-writing
+```
+
+### Manual
 
 ```bash
 git clone https://github.com/jasonlaidev/vietnamese-ux-writing.git
-mkdir -p ~/.claude/skills
 cp -r vietnamese-ux-writing/skills/vietnamese-ux-writing ~/.claude/skills/
 ```
 
-Chỉ dùng cho một dự án: chép thư mục `skills/vietnamese-ux-writing` vào `.claude/skills/` của dự án đó.
+For a single project, copy the folder into that project's `.claude/skills/` instead.
 
-Skill tự kích hoạt khi bạn viết hoặc sửa copy tiếng Việt, hoặc khi gọi `/vietnamese-ux-writing`.
+## Usage
 
-## Đóng góp
+The skill activates automatically when an agent writes or edits Vietnamese UI text. You can also ask directly:
 
-Mở issue hoặc pull request với cặp "câu hiện tại → câu đề xuất" và lý do. Quy tắc mới thêm vào bảng tương ứng trong `SKILL.md`.
+```
+Rà soát toàn bộ copy tiếng Việt trong src/, báo cáo theo bảng trước khi sửa.
+```
+
+```
+Viết thông báo lỗi khi tải giá gói Premium thất bại.
+```
+
+```
+Review the Vietnamese strings on the pricing page and make them sound professional.
+```
+
+## Structure
+
+```
+skills/vietnamese-ux-writing/
+├── SKILL.md                              Principles, workflow, output format
+├── references/
+│   ├── word-replacements.md              Colloquial and English words to replace
+│   ├── microcopy-patterns.md             Patterns per UI element
+│   └── terminology-and-spelling.md       Forms of address, tone marks, capitalization, numbers and dates
+└── scripts/
+    ├── find-vietnamese-strings.sh        List Vietnamese strings in JS/TS sources
+    └── check-tone-marks.sh               Find old-style tone marks (xoá, huỷ, khoẻ); CI-friendly exit code
+```
+
+The scripts use POSIX/ERE grep only and run on macOS (BSD grep) and Linux (GNU grep).
+
+## Contributing
+
+Issues and pull requests are welcome. For a new rule, include the current wording, the proposed wording and the reason, and add it to the matching file in `references/`. Keep examples generic: no customer names, prices or private content.
 
 ## License
 

@@ -1,110 +1,112 @@
 ---
 name: vietnamese-ux-writing
-description: Viết và rà soát chữ tiếng Việt trong giao diện web và app (UX writing, UI copy) với giọng chuyên nghiệp, không khẩu ngữ, không sáo rỗng kiểu AI. Áp dụng cho nút, nhãn, form, placeholder, thông báo lỗi, màn hình trống, thông báo đẩy, và nội dung trang giới thiệu, bảng giá, FAQ, metadata. Dùng khi viết hoặc sửa copy UI, và khi user nói "review text", "rà copy", "còn khẩu ngữ không", "kiểm tra câu chữ", "cho chuyên nghiệp hơn". Không dùng cho blog, email, nội dung mạng xã hội, dịch thuật hoặc văn bản pháp lý.
+description: Professional Vietnamese UX writing for web and mobile apps. Use when writing, reviewing or fixing any Vietnamese text a user sees in a product (buttons, labels, forms, placeholders, error and success messages, empty states, confirm dialogs, push notifications, onboarding, paywalls) or on a product website (hero, features, pricing, FAQ, SEO metadata), and when the user asks to "review text", "rà copy", "sửa câu chữ", "còn khẩu ngữ không", "cho chuyên nghiệp hơn" or "nghe như AI viết". Apply it whenever code adds or changes Vietnamese UI strings, even if copy review was not requested. Not for blogs, emails, social media posts, translation or legal documents.
+license: MIT
+metadata:
+  author: jasonlaidev
+  version: "1.0.0"
+  language: vi
 ---
 
-# Vietnamese UX writing: chữ tiếng Việt trong giao diện web và app
+# Vietnamese UX Writing
 
-Áp dụng mỗi khi thêm hoặc sửa chữ người dùng nhìn thấy, không cần chờ user yêu cầu. User đọc từng câu và sẽ yêu cầu sửa nếu câu nghe như lời nói.
+Quy tắc viết và rà soát chữ tiếng Việt trong giao diện web và app, cho sản phẩm cần giọng chuyên nghiệp: không khẩu ngữ, không sáo rỗng kiểu AI, thông báo đủ ý, xưng hô và chính tả thống nhất trong toàn dự án.
 
-## Nguyên tắc
+## When to Apply
 
-1. **Văn viết, không phải lời nói.** Câu phải đọc được trong tài liệu gửi đối tác.
-2. **Đúng ý trước, trang trọng sau.** Đừng chỉ đổi từ cho trang trọng nếu ý trở nên sai. Sự cố thật: "có nhu cầu vượt quá khả năng của Excel, Zalo" bị từ chối vì các công cụ đó không thiếu khả năng, mà không khớp quy trình. Câu đúng: "cần phần mềm bám sát quy trình thực tế, thay cho Excel, Zalo hoặc phần mềm chưa phù hợp". Không dùng "quy trình đặc thù" làm điều kiện chọn phần mềm riêng: khách có quy trình đơn giản vẫn cần phần mềm không dư thừa.
-3. **Không hứa tuyệt đối.** Tránh "không bịa", "không giới hạn", "miễn phí vĩnh viễn". Cam kết phải khớp hợp đồng. "Không tính phí theo số người dùng" đã đổi thành "không thu phí bản quyền theo số người dùng".
-4. **Viết về khách, không viết về mình.** Ưu tiên "doanh nghiệp" trong nội dung giới thiệu. Dùng "bạn" trong form và câu hỏi trực tiếp.
-5. **Câu đủ ý.** Hai cột so sánh cần cùng cấu trúc. Tránh câu mở đầu bằng "Đúng những...".
-6. **Không nói quá.** Không dùng lời khen rỗng hoặc từ sáo rỗng khi không có số liệu.
+- Thêm hoặc sửa bất kỳ chuỗi tiếng Việt nào người dùng nhìn thấy, kể cả khi không được yêu cầu rà copy.
+- Rà soát copy của một màn hình, một trang hoặc cả mã nguồn.
+- Viết nội dung trang giới thiệu sản phẩm: hero, tính năng, bảng giá, FAQ, metadata.
 
-## Từ cần thay
+Không áp dụng cho blog, email, nội dung mạng xã hội, dịch thuật và văn bản pháp lý: các loại này cần giọng và quy tắc khác.
 
-| Tránh | Dùng |
-|---|---|
-| chốt | quyết định, thống nhất |
-| vũ khí, cú hích, lộ, đẩy lên | từ phổ thông theo ngữ cảnh |
-| đầu mối | kỹ sư phụ trách, người phụ trách |
-| làm phần mềm, làm riêng | phát triển phần mềm, phát triển riêng |
-| bằng tay, tay chân | thủ công |
-| tra lại | tra cứu |
-| dễ sót | dễ thiếu sót |
-| sửa đi sửa lại | chỉnh sửa |
-| bắt tay vào | bỏ, hoặc dùng "bắt đầu" |
-| theo sát | hỗ trợ |
-| dữ liệu thật, quy mô thật | dữ liệu thực tế, quy mô thực tế |
-| gắn AI, điểm chạm | tích hợp AI, khâu cần thiết |
-| hay hỏi | thường đặt ra |
-| xong bao lâu thì... | sau khi..., trong bao lâu |
-| vài dòng về... | mô tả ngắn về... |
-| và nhiều hơn | và nhiều công nghệ khác |
-| ở đâu cả, đi đâu cả | bỏ |
-| chủ shop | chủ cửa hàng |
-| xử lý sự cố (khi nói về hỗ trợ dài hạn) | xử lý khi cần |
-| Chưa … được (thông báo lỗi) | Không thể … |
-| … rồi thử lại | Vui lòng … và thử lại |
-| dùng mãi | dùng không thời hạn |
-| đổi tay | đổi thủ công |
-| xong (bữa ăn, giao dịch) | kết thúc, hoàn tất |
-| tin (số nào, cách nào) | dựa vào, ưu tiên |
-| hay (tập, dùng) | thường |
-| ổn | bình thường |
-| để ý | chú ý |
-| Muốn X: … | Để X: … |
-| Nhờ (ai làm gì) | Vui lòng yêu cầu … |
-| Thử (bấm nút X) | Vui lòng chọn X |
-| mở được (tính năng trả phí) | kích hoạt |
+## Core Principles
 
-Thông báo lỗi dùng câu đầy đủ: "Đã có lỗi xảy ra. Vui lòng thử lại sau.", "Không thể gửi yêu cầu. Vui lòng kiểm tra kết nối mạng."
+1. **Văn viết, không phải lời nói.** Câu phải đọc được trong tài liệu gửi đối tác. Người dùng đánh giá độ tin cậy của sản phẩm qua từng câu chữ; một câu khẩu ngữ trong thông báo lỗi làm cả app trông thiếu chỉn chu.
+2. **Đúng ý trước, trang trọng sau.** Chỉ đổi từ khi ý vẫn đúng. "Có nhu cầu vượt quá khả năng của Excel" sai ý, vì Excel không thiếu khả năng mà không khớp quy trình; câu đúng là "cần phần mềm bám sát quy trình thực tế, thay cho Excel hoặc phần mềm chưa phù hợp".
+3. **Không hứa tuyệt đối.** Tránh "không giới hạn", "miễn phí vĩnh viễn", "luôn chính xác". Cam kết trên giao diện phải khớp điều khoản và hợp đồng, vì người dùng có thể dùng nó làm căn cứ khiếu nại.
+4. **Nói điều sẽ xảy ra, không nói người dùng nên cảm thấy gì.** "Dữ liệu mẫu, không được lưu" thay cho "Yên tâm, đăng nhập lúc nào cũng được nhé". Lời trấn an và từ đệm ("nhé", "đừng lo", "thoải mái") là dấu hiệu dễ nhận ra của văn AI.
+5. **Câu đủ ý, cấu trúc song song.** Thông báo lỗi nêu việc gì thất bại và người dùng làm gì tiếp. Các mục trong cùng danh sách hoặc hai cột so sánh dùng cùng cấu trúc ngữ pháp.
+6. **Không nói quá.** Không dùng lời khen rỗng ("tuyệt vời", "đột phá", "tối ưu") khi không có số liệu đi kèm.
 
-## Xưng hô
+## Quick Reference
 
-Mỗi dự án chỉ dùng một cách gọi cha mẹ (ba / bố / cha), áp dụng cho cả giao diện, nội dung tự sinh và bài viết. Ghi lựa chọn vào memory của dự án đó, không ghi vào skill này. Nếu chọn "ba", tránh câu mở đầu bằng "Ba + danh từ" để chỉ số ba ("Ba số gần nhau" bị đọc thành số của ba); viết "Cả ba kết quả…".
+Các lỗi thường gặp nhất. Bảng đầy đủ nằm trong `references/`.
 
-## Tiếng Anh
+| Sai | Đúng | Vì sao |
+|---|---|---|
+| Chưa xóa được | Không thể xóa | Thông báo lỗi nêu kết quả, không hẹn "chưa" |
+| Kiểm tra mạng rồi thử lại. | Vui lòng kiểm tra kết nối mạng và thử lại. | Câu đầy đủ, lịch sự |
+| Đổi món bằng tay | Đổi món thủ công | "bằng tay" là khẩu ngữ |
+| Trả một lần, dùng mãi | Thanh toán một lần, dùng không thời hạn | "mãi" là khẩu ngữ |
+| Nên tin số nào | Nên dựa vào kết quả nào | "tin" mang nghĩa cảm tính |
+| Muốn hủy: vào Cài đặt | Để hủy: vào Cài đặt | "Muốn" là lời nói |
+| Chính Sách Quyền Riêng Tư | Chính sách quyền riêng tư | Tiếng Việt chỉ viết hoa chữ đầu câu và tên riêng |
+| xoá, huỷ, khoẻ | xóa, hủy, khỏe | Một kiểu đặt dấu cho cả dự án |
 
-Khách là chủ doanh nghiệp, không phải kỹ sư.
+## Workflow
 
-| Tránh | Dùng |
-|---|---|
-| source code | mã nguồn |
-| code (động từ), viết code, vào code | lập trình |
-| trend | xu hướng |
-| brand, theme | thương hiệu, giao diện mẫu |
-| real-time | theo thời gian thực |
-| UI (trong câu bán hàng) | giao diện |
-| lead, sale | khách hàng tiềm năng, nhân viên kinh doanh |
-| deploy, push, production | triển khai, cập nhật mã nguồn, vận hành |
+### Viết copy mới
 
-Giữ nguyên từ đã quen: website, app, dashboard, chatbot, demo, API, prototype, wireframe, tên công nghệ.
+1. Xác định loại chuỗi (nút, lỗi, màn hình trống…) và đọc mẫu tương ứng trong `references/microcopy-patterns.md`.
+2. Viết theo quy ước có sẵn của dự án: xưng hô, cách gọi người dùng, kiểu đặt dấu. Nếu dự án chưa có quy ước, dùng mặc định trong `references/terminology-and-spelling.md` và ghi lại quy ước đã chọn vào tài liệu của dự án (`CLAUDE.md`, `AGENTS.md` hoặc tương đương) để lần sau dùng lại.
+3. Đối chiếu bảng `references/word-replacements.md` trước khi kết thúc.
 
-## Chính tả
+### Rà soát copy có sẵn
 
-Một cách bỏ dấu trong toàn dự án: hóa, xóa, họa, khóa, tùy, thỏa, sức khỏe. Giữ nguyên "quý", "quỳ".
-
-Quy tắc: chỉ đặt dấu lên chữ đầu khi vần oa, oe, uy **không có phụ âm cuối** và không đứng sau "q". "xoá" → "xóa", "huỷ" → "hủy", "khoẻ" → "khỏe"; "hoàn", "toán", "khoảng", "thuyền", "quý" giữ nguyên. Kiểm tra phần còn sót:
-```bash
-grep -rn -E '(oá|oà|oả|oã|oạ|oé|oè|oẻ|oẽ|oẹ|uý|uỳ|uỷ|uỹ|uỵ)\b' <thư mục mã nguồn> | grep -v -E 'qu(ý|ỳ|ỷ)'
-```
-
-## Ngoại lệ, giữ nguyên
-
-- Đánh giá mẫu trong trang demo: đó là lời khách hàng giả định, được dùng "mình", "ngon", "đáng tiền".
-- Mô tả sản phẩm của thương hiệu demo, thuật ngữ ngành (căn hộ, sổ hồng, giỏ hàng BĐS).
-- Comment, tên biến, slug URL, nội dung email nội bộ.
-- Tiêu đề bài viết được trích dẫn, URL nguồn, và phần tóm tắt cần giữ giọng tác giả bài gốc (chỉ áp dụng quy tắc xưng hô và chính tả, không viết lại văn phong).
-- Câu đã được user duyệt. Ví dụ: "Hỗ trợ dài hạn".
-
-## Quy trình rà soát
-
-1. Liệt kê mọi dòng có ký tự Việt, loại `components/ui/` và test. Dự án Next.js thường để mã trong `app components lib`, dự án Expo/React Native trong `src`; chỉ giữ thư mục có thật:
+1. **Liệt kê chuỗi tiếng Việt** bằng script, thay vì đọc file thủ công dễ bỏ sót:
    ```bash
-   LC_ALL=C grep -rn -P '[\x80-\xFF]' $(ls -d app components lib src 2>/dev/null) --include='*.tsx' --include='*.ts' | grep -v -E 'components/ui/|__tests__|\.test\.'
+   bash scripts/find-vietnamese-strings.sh [thư mục…]
    ```
-   Không dùng Perl với class ký tự tiếng Việt khi thiếu `use utf8`: regex khớp theo byte và bỏ sót dòng mà không báo lỗi. Output lớn thì ghi ra file và đọc hết.
-2. Xác định phần đang hiển thị: component bị comment trong page thì ghi là đang ẩn.
-3. Đọc từng dòng, gồm cả metadata, `aria-label`, placeholder, thông báo lỗi, trạng thái thành công và trang demo.
-4. Báo cáo theo bảng `vị trí | hiện tại | đề xuất`. Nếu user chỉ yêu cầu review thì chưa sửa file.
-5. Sau khi sửa: grep lại từ đã thay, chạy typecheck, lint và test (test có thể so khớp nguyên văn chuỗi chữ, cập nhật kỳ vọng cho khớp), kiểm tra trang trên dev, và rà trang ở 320px nếu câu dài ra đáng kể trong nút hoặc bảng.
+   Không truyền thư mục thì script tự quét `app components lib src pages` (thư mục nào có thật), bỏ qua `components/ui/`, test và `node_modules`. Output lớn thì ghi ra file rồi đọc hết.
+2. **Xác định phần đang hiển thị.** Component bị comment hoặc không được render thì ghi chú là đang ẩn.
+3. **Đọc từng dòng**, gồm cả metadata, `aria-label`, `accessibilityLabel`, placeholder, thông báo lỗi, trạng thái thành công, nội dung thông báo đẩy và dữ liệu demo.
+4. **Báo cáo** theo định dạng ở mục Output Format. Nếu người dùng chỉ yêu cầu review thì dừng ở bước này, chưa sửa file.
+5. **Sửa và kiểm tra:**
+   - Chạy lại script tìm chuỗi để chắc chắn không còn từ cũ.
+   - Chạy `bash scripts/check-tone-marks.sh [thư mục…]` nếu dự án dùng kiểu đặt dấu mới.
+   - Chạy typecheck, lint và test. Test có thể so khớp nguyên văn chuỗi; cập nhật kỳ vọng trong test cho khớp với copy mới.
+   - Xem lại màn hình ở chiều rộng 320 px nếu câu mới dài hơn đáng kể trong nút hoặc bảng.
 
-## Bổ sung quy tắc
+## Output Format
 
-Khi user từ chối một từ hoặc câu, thêm vào bảng trên kèm lý do. Không viết tên khách hàng, giá hay nội dung riêng tư vào skill này.
+Khi rà soát, báo cáo theo bảng, mỗi dòng một chuỗi cần sửa:
+
+| Vị trí | Hiện tại | Đề xuất | Lý do |
+|---|---|---|---|
+| `src/app/paywall.tsx:129` | Trả một lần, dùng mãi | Thanh toán một lần, dùng không thời hạn | Khẩu ngữ |
+
+Sau bảng, liệt kê ngắn gọn các thay đổi mang tính hệ thống (đổi cách xưng hô, đổi kiểu đặt dấu) và những chỗ cố ý giữ nguyên.
+
+## Exceptions
+
+Giữ nguyên, không sửa văn phong:
+
+- Lời đánh giá mẫu trên trang demo: đó là lời khách hàng giả định, được dùng giọng thân mật.
+- Tên sản phẩm, tên thương hiệu, thuật ngữ ngành.
+- Comment, tên biến, slug URL, nội dung chỉ dành cho nhà phát triển.
+- Tiêu đề bài viết được trích dẫn, URL nguồn, và nội dung tóm tắt cần giữ giọng tác giả gốc. Với loại này chỉ áp dụng quy ước xưng hô và chính tả.
+- Câu đã được chủ sản phẩm duyệt.
+
+## References
+
+Đọc file tương ứng khi cần, không cần đọc hết:
+
+| File | Nội dung | Khi nào đọc |
+|---|---|---|
+| `references/word-replacements.md` | Bảng từ khẩu ngữ và từ tiếng Anh cần thay | Mọi lần viết hoặc rà copy |
+| `references/microcopy-patterns.md` | Mẫu cho nút, lỗi, thành công, màn hình trống, hộp xác nhận, thông báo đẩy, form | Viết chuỗi giao diện mới |
+| `references/terminology-and-spelling.md` | Xưng hô, cách đặt dấu thanh, viết hoa, số, ngày giờ | Thiết lập quy ước dự án, sửa chính tả hàng loạt |
+
+## Scripts
+
+| Script | Chức năng |
+|---|---|
+| `scripts/find-vietnamese-strings.sh` | Liệt kê mọi dòng có chữ tiếng Việt trong file `.ts`, `.tsx`, `.js`, `.jsx` |
+| `scripts/check-tone-marks.sh` | Tìm chữ đặt dấu kiểu cũ (`xoá`, `huỷ`, `khoẻ`) còn sót |
+
+Cả hai script chỉ dùng cú pháp grep chuẩn POSIX/ERE, chạy được với BSD grep (macOS) và GNU grep (Linux).
+
+## Extending
+
+Khi chủ sản phẩm từ chối một từ hoặc một câu, thêm cặp "sai → đúng" kèm lý do vào file reference phù hợp. Quy ước riêng của một dự án (cách gọi phụ huynh, tên tính năng) ghi trong tài liệu của dự án đó, không ghi vào skill này. Không đưa tên khách hàng, giá hay nội dung riêng tư vào skill.

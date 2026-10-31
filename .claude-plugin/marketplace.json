@@ -1,0 +1,21 @@
+{
+  "name": "vietnamese-ux-writing",
+  "owner": {
+    "name": "jasonlaidev"
+  },
+  "metadata": {
+    "description": "Professional Vietnamese UX writing skill for web and mobile apps",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "vietnamese-ux-writing",
+      "description": "Write and review Vietnamese interface text: no colloquialisms, complete error messages, consistent terms and spelling",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/vietnamese-ux-writing"
+      ]
+    }
+  ]
+}
