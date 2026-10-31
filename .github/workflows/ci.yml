@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate plugin manifest and skill
+        run: npx -y @anthropic-ai/claude-code@2.1.316 plugin validate .
+
+      - name: Lint scripts
+        run: shellcheck skills/vietnamese-ux-writing/scripts/*.sh
+
+      - name: Smoke test scripts
+        run: |
+          scripts=skills/vietnamese-ux-writing/scripts
+          mkdir -p /tmp/sample
+          printf 'const a = "Xoá đơn hàng";\nconst b = "Lưu";\n' > /tmp/sample/a.tsx
+          bash "$scripts/find-vietnamese-strings.sh" /tmp/sample | grep -q 'Lưu'
+          if bash "$scripts/check-tone-marks.sh" /tmp/sample; then
+            echo "check-tone-marks.sh should fail on old-style tone marks"
+            exit 1
+          fi
+          printf 'const a = "Xóa đơn hàng";\n' > /tmp/sample/a.tsx
+          bash "$scripts/check-tone-marks.sh" /tmp/sample
