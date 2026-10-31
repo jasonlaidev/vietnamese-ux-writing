@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "appointments": "Lịch hẹn",
+    "account": "Tài khoản"
+  },
+  "settings": {
+    "title": "Cài Đặt",
+    "notifications": "Thông báo",
+    "language": "Ngôn ngữ"
+  },
+  "review": {
+    "prompt": "Bạn thấy dịch vụ thế nào? Rate cho shop 5 sao nha",
+    "submit": "Gửi đánh giá"
+  }
+}

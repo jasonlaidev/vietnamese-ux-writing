@@ -1,0 +1,8 @@
+{
+  "name": "spa-booking",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "test": "jest"
+  }
+}

@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: review-settings-strings
+expected_outcome: |
+  report.md lists every colloquial string as a table (location, current, proposed, reason), and settings-strings.ts is fixed:
+  errors read "Không thể …" with "Vui lòng … và thử lại", no "nhé", emoji or exclamation marks, no "bằng tay" or "dùng mãi",
+  new-style tone marks (xóa, hủy, khỏe), sentence-case "Chính sách quyền riêng tư", and the delete dialog names the action instead of "OK".
+context:
+  scaffold_script: place-files.sh

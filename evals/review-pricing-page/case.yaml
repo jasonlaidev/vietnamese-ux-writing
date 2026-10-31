@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: review-pricing-page
+expected_outcome: |
+  pricing.tsx keeps the same JSX structure. Headings are sentence case; absolute promises and hype ("vĩnh viễn", "không giới hạn",
+  "đột phá", "tuyệt vời", "gấp 10 lần", "không bao giờ") are gone; colloquial and English words ("chủ shop", "chốt", "nha", "đừng lo",
+  "lead", "sync", "real-time", "Click vào đây", "lộ") are replaced; "hủy" uses the new tone mark.
+context:
+  scaffold_script: place-files.sh

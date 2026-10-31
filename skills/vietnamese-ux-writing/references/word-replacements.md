@@ -1,6 +1,6 @@
 # Word Replacements
 
-Bảng từ cần thay khi viết và rà soát copy. Mỗi dòng là một cặp đã được chủ sản phẩm từ chối trong dự án thực tế. Khi thay, đọc lại cả câu: đôi khi cần viết lại câu chứ không chỉ đổi một từ.
+Bảng từ cần thay khi viết và rà soát copy, gom từ các lỗi thường gặp trong app thương mại điện tử, tài chính, đặt lịch, giáo dục, sức khỏe và phần mềm doanh nghiệp. Khi thay, đọc lại cả câu: đôi khi cần viết lại câu chứ không chỉ đổi một từ.
 
 ## Contents
 
@@ -13,32 +13,33 @@ Bảng từ cần thay khi viết và rà soát copy. Mỗi dòng là một cặ
 
 | Tránh | Dùng |
 |---|---|
-| chốt | quyết định, thống nhất |
-| vũ khí, cú hích, lộ, đẩy lên | từ phổ thông theo ngữ cảnh |
-| đầu mối | người phụ trách |
-| làm phần mềm, làm riêng | phát triển phần mềm, phát triển riêng |
-| bằng tay, tay chân, đổi tay | thủ công |
+| chốt (đơn, lịch, giá) | xác nhận |
+| chủ shop | chủ cửa hàng, người bán |
+| ship, shipper | giao hàng, nhân viên giao hàng |
+| bằng tay, tay chân, sửa tay | thủ công |
 | tra lại | tra cứu |
 | dễ sót | dễ thiếu sót |
 | sửa đi sửa lại | chỉnh sửa |
-| bắt tay vào | bắt đầu, hoặc bỏ |
-| theo sát | hỗ trợ |
-| dữ liệu thật, quy mô thật | dữ liệu thực tế, quy mô thực tế |
-| gắn AI, điểm chạm | tích hợp AI, khâu cần thiết |
-| hay hỏi | thường đặt ra |
-| hay (tập, dùng) | thường |
-| xong bao lâu thì… | sau khi…, trong bao lâu |
-| xong (bữa ăn, giao dịch) | kết thúc, hoàn tất |
-| vài dòng về… | mô tả ngắn về… |
-| và nhiều hơn | và nhiều … khác |
-| ở đâu cả, đi đâu cả | bỏ |
-| chủ shop | chủ cửa hàng |
+| hay (dùng, gặp) | thường |
+| hay hỏi | thường gặp |
+| xong (giao dịch, đơn hàng, bài học) | hoàn tất, hoàn thành |
+| xong rồi, ok rồi | Đã + hành động ("Đã lưu") |
 | dùng mãi | dùng không thời hạn |
-| tin (số nào, cách nào) | dựa vào, ưu tiên |
+| tin (kết quả nào, cách nào) | dựa vào, ưu tiên |
 | ổn | bình thường, đạt yêu cầu |
 | để ý | chú ý |
 | mở được (tính năng trả phí) | kích hoạt |
+| lộ (dữ liệu, thông tin) | bị truy cập trái phép, bị tiết lộ |
+| đẩy (bài, ảnh) lên | đăng, tải lên |
+| xịn, đỉnh, siêu (rẻ, nhanh) | bỏ, hoặc nêu con số cụ thể |
+| tiền về (tài khoản) | tiền đã được chuyển vào tài khoản |
+| bị lỗi rồi | Đã có lỗi xảy ra |
 | nhé, nha, đừng lo, thoải mái, lúc nào cũng được | bỏ; nêu điều sẽ xảy ra |
+| xóa được, dùng được, xem được (khả năng) | có thể xóa, có thể sử dụng, có thể xem |
+| vào (nhóm, gia đình, workspace) | tham gia |
+| lên món, lên đơn | lập thực đơn, tạo đơn hàng |
+| luôn ("nhập luôn", "làm luôn") | bỏ; hoặc "ngay" |
+| không sao ("ăn thì không sao") | không ảnh hưởng nhiều |
 
 ## Thông báo lỗi và hướng dẫn
 
@@ -52,25 +53,34 @@ Bảng từ cần thay khi viết và rà soát copy. Mỗi dòng là một cặ
 | Thử (bấm nút X) | Vui lòng chọn X |
 | Giao dịch xong nhưng … | Giao dịch đã hoàn tất nhưng … |
 | Đăng nhập trước, để … | Vui lòng đăng nhập để … |
+| … không hợp lệ (đứng một mình) | nêu yêu cầu đúng: "Mật khẩu cần có ít nhất 8 ký tự." |
 
 ## Từ tiếng Anh
 
-Người dùng là chủ doanh nghiệp hoặc người dùng phổ thông, không phải kỹ sư.
+Người dùng phổ thông không phải kỹ sư. Dịch khi đã có từ tiếng Việt quen thuộc.
 
 | Tránh | Dùng |
 |---|---|
-| source code | mã nguồn |
-| code (động từ), viết code | lập trình |
-| trend | xu hướng |
-| brand, theme | thương hiệu, giao diện mẫu |
-| real-time | theo thời gian thực |
-| UI (trong câu giới thiệu) | giao diện |
-| lead, sale | khách hàng tiềm năng, nhân viên kinh doanh |
-| deploy, push, production | triển khai, cập nhật, vận hành |
+| order | đơn hàng |
+| checkout | thanh toán |
+| feedback | góp ý, phản hồi |
+| link | liên kết |
+| snack | đồ ăn vặt |
+| massage | xoa bóp |
+| setting | cài đặt |
+| account | tài khoản |
 | sync | đồng bộ |
 | upload, download | tải lên, tải xuống |
 | login, logout | đăng nhập, đăng xuất |
+| update (động từ) | cập nhật |
+| real-time | theo thời gian thực |
+| trend | xu hướng |
+| brand, theme | thương hiệu, giao diện |
+| lead, sale | khách hàng tiềm năng, nhân viên kinh doanh |
+| source code, code (động từ) | mã nguồn, lập trình |
+| deploy, production | triển khai, vận hành |
+| UI (trong câu giới thiệu) | giao diện |
 
 ## Từ giữ nguyên
 
-Đã quen với người dùng Việt, không cần dịch: website, app, email, dashboard, chatbot, demo, API, Premium, tên công nghệ và tên sản phẩm.
+Đã quen với người dùng Việt, không cần dịch: website, app, email, OTP, QR, voucher, dashboard, chatbot, API, Premium, tên công nghệ và tên sản phẩm. Nếu sản phẩm đã chọn từ tiếng Việt ("mã giảm giá" thay cho "voucher"), dùng nhất quán từ đó.

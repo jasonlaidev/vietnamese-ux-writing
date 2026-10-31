@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MediBook</string>
+    <string name="booking_success">Đặt lịch ok rồi nha!</string>
+    <string name="booking_fail">Chưa đặt được lịch, thử lại đi</string>
+    <string name="otp_wrong">Sai mã OTP rồi</string>
+    <string name="cancel_confirm_title">Bạn chắc chắn muốn huỷ?</string>
+    <string name="cancel_confirm_yes">Có</string>
+    <string name="cancel_confirm_no">Không</string>
+    <string name="empty_appointments">Chưa có lịch hẹn nào cả, đặt ngay đi!</string>
+    <string name="reminder_body">Đừng quên lịch khám lúc %1$s ngày mai nhé 😊</string>
+    <string name="doctor_label">Bác Sĩ Phụ Trách</string>
+    <string name="phone_invalid">Số điện thoại không hợp lệ</string>
+    <string name="sync_offline">Mất mạng rồi, check lại wifi nha</string>
+</resources>

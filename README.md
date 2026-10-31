@@ -10,8 +10,8 @@ Agent skill giúp AI viết và rà soát chữ tiếng Việt trong giao diện
 |---|---|
 | Chưa xóa được. Kiểm tra mạng rồi thử lại. | Không thể xóa. Vui lòng kiểm tra kết nối mạng và thử lại. |
 | Trả một lần, dùng mãi | Thanh toán một lần, dùng không thời hạn |
-| Các món đã đổi tay sẽ bị thay. | Các món đã đổi thủ công sẽ được thay thế. |
-| Nên tin số nào? | Nên dựa vào kết quả nào? |
+| Đơn chốt rồi thì không sửa được nha. | Đơn hàng đã xác nhận không thể chỉnh sửa. |
+| Thanh toán fail, thử lại đi | Không thể thanh toán. Vui lòng kiểm tra số dư hoặc chọn phương thức khác. |
 | Chính Sách Quyền Riêng Tư | Chính sách quyền riêng tư |
 | xoá · huỷ · khoẻ (mixed with xóa · hủy · khỏe) | xóa · hủy · khỏe |
 
@@ -19,7 +19,8 @@ Agent skill giúp AI viết và rà soát chữ tiếng Việt trong giao diện
 
 - **Interface text:** buttons, labels, forms, placeholders, error and success messages, empty states, confirm dialogs, push notifications, paywalls.
 - **Product websites:** hero, features, pricing, FAQ, SEO metadata.
-- **Codebase review:** list every Vietnamese string in a Next.js or Expo/React Native project, report findings as `location | current | proposed | reason`, fix them, then run typecheck, lint and tests.
+- **Any kind of app:** e-commerce, fintech, booking, education, health, SaaS and internal tools. Examples in the skill are spread across these domains.
+- **Codebase review:** list every Vietnamese string in a project, report findings as `location | current | proposed | reason`, fix them, then run the project's own checks. The bundled scripts read React, Next.js, React Native, Vue, Svelte, Angular, Flutter, iOS, Android, PHP/Laravel, Python/Django, Ruby, Go, .NET, Rust and Elixir sources, plus translation files (`strings.xml`, `.strings`, `.arb`, `.json`, `.yaml`, `.po`, `.xliff`, `.resx`). Other languages: pass extra extensions with `EXTRA_EXT="lua cfm"`. The writing rules themselves apply to any stack.
 
 Out of scope: blogs, emails, social media posts, translation and legal documents.
 
@@ -32,11 +33,15 @@ Out of scope: blogs, emails, social media posts, translation and legal documents
 /plugin install vietnamese-ux-writing@vietnamese-ux-writing
 ```
 
-### skills CLI
+Update later with `/plugin marketplace update vietnamese-ux-writing`.
+
+### skills CLI (Claude Code, Cursor, Codex, Gemini CLI and other agents)
 
 ```bash
 npx skills add jasonlaidev/vietnamese-ux-writing
 ```
+
+The CLI asks which agents to install for and whether to install globally or for the current project.
 
 ### Manual
 
@@ -71,13 +76,35 @@ skills/vietnamese-ux-writing/
 ├── references/
 │   ├── word-replacements.md              Colloquial and English words to replace
 │   ├── microcopy-patterns.md             Patterns per UI element
-│   └── terminology-and-spelling.md       Forms of address, tone marks, capitalization, numbers and dates
+│   └── terminology-and-spelling.md       Forms of address, product terms, tone marks, capitalization, numbers, money and dates
 └── scripts/
-    ├── find-vietnamese-strings.sh        List Vietnamese strings in JS/TS sources
+    ├── find-vietnamese-strings.sh        List Vietnamese strings in source, template and translation files
     └── check-tone-marks.sh               Find old-style tone marks (xoá, huỷ, khoẻ); CI-friendly exit code
 ```
 
 The scripts use POSIX/ERE grep only and run on macOS (BSD grep) and Linux (GNU grep).
+
+Repository layout around the skill:
+
+```
+.claude-plugin/
+├── plugin.json        Plugin manifest
+└── marketplace.json   Lets `/plugin marketplace add` install from this repo
+evals/                 Test cases for `claude plugin eval` (quality and triggering)
+```
+
+## Evaluation
+
+The `evals/` folder holds two kinds of cases, run with `claude plugin eval`:
+
+- **Quality** (`review-*`, `write-*`): review or write copy, with and without the skill, 3 runs each. Graders check concrete outcomes such as no colloquialisms, error messages that state the next step, valid XML with placeholders kept, and good strings left untouched.
+- **Triggering** (`trigger-pos-*`, `trigger-neg-*`): 10 prompts that should load the skill and 10 that should not (blog posts, emails, translation, contracts, code questions, English UI).
+
+```bash
+claude plugin eval . --case 'trigger-*' --ablation none
+claude plugin eval . --case 'review-*' --scaffold --allow-tools Write Edit
+claude plugin eval . --case 'write-*' --allow-tools Write Edit
+```
 
 ## Contributing
 

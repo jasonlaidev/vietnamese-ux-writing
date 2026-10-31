@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: trigger-neg-05
+expected_outcome: |
+  The vietnamese-ux-writing skill is not invoked.

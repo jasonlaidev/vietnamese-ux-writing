@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "appointments": "Appointments",
+    "account": "Account"
+  },
+  "settings": {
+    "title": "Settings",
+    "notifications": "Notifications",
+    "language": "Language"
+  },
+  "review": {
+    "prompt": "How was your service?",
+    "submit": "Submit review"
+  }
+}

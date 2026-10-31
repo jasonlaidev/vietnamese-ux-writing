@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: review-large-repo
+expected_outcome: |
+  The agent finds Vietnamese UI text spread across 30 files (pages, components, lib, server push, locales JSON, metadata,
+  aria-label, placeholder) and fixes every planted problem: title case, hype and keyword-stuffed metadata, colloquialisms
+  (sđt, chốt, book, xịn, nha, nhé, fail, rate, shop), emoji, "OK"/"Thôi" buttons, old tone marks, absolute refund promise,
+  bare "không hợp lệ". It leaves already-good strings, the customer testimonial in prisma/seed.ts and node_modules unchanged,
+  and updates the test that asserts the old network error text.
+context:
+  scaffold_script: place-files.sh

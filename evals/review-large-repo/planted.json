@@ -1,0 +1,85 @@
+{
+  "planted": {
+    "app/layout.tsx": [
+      "Siêu Nhanh Siêu Tiện",
+      "spa giá rẻ, spa gần đây"
+    ],
+    "app/login/page.tsx": [
+      "Nhập sđt vào đây"
+    ],
+    "app/booking/page.tsx": [
+      "Chọn Thời Gian"
+    ],
+    "app/appointments/page.tsx": [
+      "Trống trơn à",
+      "book ngay cho xịn nha"
+    ],
+    "app/pricing/page.tsx": [
+      "không cần lý do",
+      "tuyệt đối"
+    ],
+    "components/BookingSummary.tsx": [
+      "Chốt lịch luôn"
+    ],
+    "components/AppointmentCard.tsx": [
+      "Huỷ lịch hẹn"
+    ],
+    "components/CancelDialog.tsx": [
+      "Bạn có chắc không?",
+      ">OK<",
+      ">Thôi<",
+      "huỷ"
+    ],
+    "lib/errors.ts": [
+      "rồi thử lại",
+      "mất rồi",
+      "Thanh toán fail'"
+    ],
+    "lib/validation.ts": [
+      "'Số điện thoại không hợp lệ'"
+    ],
+    "lib/toast.ts": [
+      "Lưu thành công rồi",
+      "🎉"
+    ],
+    "server/push.ts": [
+      "nha!!!",
+      "😘",
+      "nhé"
+    ],
+    "locales/vi.json": [
+      "Cài Đặt",
+      "Rate cho shop"
+    ]
+  },
+  "keep": {
+    "app/booking/success/page.tsx": [
+      "Đã đặt lịch",
+      "Xem lịch hẹn"
+    ],
+    "app/account/page.tsx": [
+      "Chính sách quyền riêng tư",
+      "Đăng xuất"
+    ],
+    "app/account/edit/page.tsx": [
+      "Họ và tên",
+      "Ví dụ: ten@email.com"
+    ],
+    "components/Footer.tsx": [
+      "Điều khoản sử dụng"
+    ],
+    "lib/errors.ts": [
+      "Đã có lỗi xảy ra. Vui lòng thử lại sau."
+    ],
+    "lib/toast.ts": [
+      "Đã hủy lịch hẹn",
+      "Đã sao chép mã đặt lịch"
+    ],
+    "prisma/seed.ts": [
+      "Spa xịn lắm"
+    ],
+    "node_modules/fake-lib/index.js": [
+      "Chưa xoá được nha"
+    ]
+  }
+}

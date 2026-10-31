@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: write-expense-app-copy
+expected_outcome: |
+  copy.md has all five items. The error says "Không thể …" and "Vui lòng …"; the dialog title is a question naming the deletion,
+  the buttons are "Xóa" and "Hủy"; the toast starts with "Đã"; no "nhé", "nha", "đừng lo", emoji or exclamation marks; new-style tone marks.

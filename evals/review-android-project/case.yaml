@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: review-android-project
+expected_outcome: |
+  The agent finds Vietnamese text in both res/values-vi/strings.xml and the hard-coded Toast strings in PaymentActivity.kt,
+  reports them in report.md as a table, and fixes them: strings.xml stays valid XML with every string name and the %1$s
+  placeholder kept; errors follow "Không thể … Vui lòng …"; no "nha", "nhé", "ok", "fail", "check", emoji or exclamation marks;
+  the cancel dialog buttons are not "Có"/"Không"; labels are sentence case; new-style tone marks (hủy).
+context:
+  scaffold_script: place-files.sh
