@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "Professional Vietnamese UX writing skill for web and mobile apps",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "vietnamese-ux-writing",
       "description": "Write and review Vietnamese interface text: no colloquialisms, complete error messages, consistent terms and spelling",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "source": "./"
     }
   ]

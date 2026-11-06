@@ -6,6 +6,7 @@ Bảng từ cần thay khi viết và rà soát copy, gom từ các lỗi thư�
 
 - [Khẩu ngữ](#khẩu-ngữ)
 - [Thông báo lỗi và hướng dẫn](#thông-báo-lỗi-và-hướng-dẫn)
+- [Văn hành chính](#văn-hành-chính)
 - [Từ tiếng Anh](#từ-tiếng-anh)
 - [Từ giữ nguyên](#từ-giữ-nguyên)
 
@@ -54,6 +55,20 @@ Bảng từ cần thay khi viết và rà soát copy, gom từ các lỗi thư�
 | Giao dịch xong nhưng … | Giao dịch đã hoàn tất nhưng … |
 | Đăng nhập trước, để … | Vui lòng đăng nhập để … |
 | … không hợp lệ (đứng một mình) | nêu yêu cầu đúng: "Mật khẩu cần có ít nhất 8 ký tự." |
+
+## Văn hành chính
+
+Trang trọng không đồng nghĩa với dài. Bỏ chữ không mang thông tin; dùng từ người dùng nói hằng ngày.
+
+| Tránh | Dùng |
+|---|---|
+| tiến hành cập nhật, thực hiện việc xóa | cập nhật, xóa |
+| quá trình sao lưu đang diễn ra | đang sao lưu |
+| chức năng thông báo đã được kích hoạt | đã bật thông báo |
+| nhằm mục đích, với mục đích | để |
+| trong trường hợp | nếu, khi |
+| tải về không thành công | không tải được, không thể tải xuống |
+| Vui lòng (trước hướng dẫn trung tính) | bỏ: "Chọn tệp" |
 
 ## Từ tiếng Anh
 

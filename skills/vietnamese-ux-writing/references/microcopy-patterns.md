@@ -9,6 +9,7 @@ Mẫu cho từng loại chuỗi giao diện. Mỗi mẫu gồm cấu trúc, ví 
 - [Thông báo thành công](#thông-báo-thành-công)
 - [Hộp thoại xác nhận](#hộp-thoại-xác-nhận)
 - [Màn hình trống](#màn-hình-trống)
+- [Ghi chú nguồn, giới hạn và ghi chú nội bộ](#ghi-chú-nguồn-giới-hạn-và-ghi-chú-nội-bộ)
 - [Form: nhãn, placeholder, lỗi nhập](#form-nhãn-placeholder-lỗi-nhập)
 - [Thông báo đẩy và nhắc nhở](#thông-báo-đẩy-và-nhắc-nhở)
 - [Paywall và thanh toán](#paywall-và-thanh-toán)
@@ -36,9 +37,11 @@ Cấu trúc: **Không thể + hành động.** + **Vui lòng + việc cần làm
 | Không thể thanh toán. Vui lòng kiểm tra số dư hoặc chọn phương thức khác. | Thanh toán fail |
 | Đã có lỗi xảy ra. Vui lòng thử lại sau. | Error 500 |
 
+Các dạng nêu kết quả như "Không tìm thấy …", "Không đủ …", "Không có …" đều đúng; không đổi chúng thành "Không thể …". Mục tiêu là bỏ "Chưa … được", "… thất bại" kiểu dịch sát và câu cụt, không phải ép mọi lỗi vào một khuôn.
+
 Tiêu đề hộp thoại lỗi chỉ cần phần đầu ("Không thể xóa tài khoản"); phần hướng dẫn đặt ở nội dung.
 
-Thông báo lỗi đứng một mình (toast, dòng lỗi dưới ô nhập, banner) luôn có đủ hai phần. Khi không có việc cụ thể hơn để làm, phần sau là "Vui lòng thử lại.": "Không thể xóa. Vui lòng thử lại.", không phải "Không thể xóa". Người dùng gặp lỗi cần biết bước tiếp theo; một câu cụt khiến họ không rõ nên thử lại, chờ hay liên hệ hỗ trợ.
+Thông báo lỗi đứng một mình (toast, dòng lỗi dưới ô nhập, banner) luôn có đủ hai phần. Dòng trạng thái hoặc nhật ký chỉ mô tả việc hệ thống đã làm ("Đã hủy đồng bộ vì thiết bị chuyển sang chế độ tiết kiệm pin") thì không cần thêm "Vui lòng". Khi không có việc cụ thể hơn để làm, phần sau là "Vui lòng thử lại.": "Không thể xóa. Vui lòng thử lại.", không phải "Không thể xóa". Người dùng gặp lỗi cần biết bước tiếp theo; một câu cụt khiến họ không rõ nên thử lại, chờ hay liên hệ hỗ trợ.
 
 ## Thông báo thành công
 
@@ -67,12 +70,32 @@ Cấu trúc: trạng thái hiện tại + việc người dùng có thể làm +
 > **Không tìm thấy kết quả cho "áo khoác"**
 > Vui lòng thử từ khóa khác hoặc bỏ bớt bộ lọc.
 
+## Ghi chú nguồn, giới hạn và ghi chú nội bộ
+
+Áp dụng cho dòng nguồn, chú thích cách tính, cảnh báo giới hạn và mọi đoạn giải thích nhỏ dưới nội dung. Người dùng đọc đây là lời của sản phẩm, nên giữ giọng trung tính như phần còn lại của giao diện.
+
+- **Sản phẩm không tự xưng trong nội dung.** Bỏ "app dịch", "app chưa xét", "theo quy ước của app", "app chọn số…". Viết trung tính: "chưa xét …", "ở đây tính theo …", "quy ước, chưa có nguồn".
+- **Không nêu công cụ hay mô hình AI đã dùng** ("bản dịch của Claude", "do ChatGPT tóm tắt") trong giao diện. Nếu cần minh bạch việc dùng AI, đặt ở một chỗ cố định (trang Giới thiệu, điều khoản), không rải trong từng đoạn.
+- **Không để lộ ghi chú nội bộ:** ngày ai đó quyết định ("bạn chọn ngày 04/11"), việc đang chờ ("chờ duyệt", "TODO"), đường dẫn tài liệu cho nhà phát triển ("docs/…"), mã nội bộ (mã video, timecode, mã ticket), tên người trong nhóm.
+- **Dòng nguồn ngắn, một dòng, chữ nhỏ:** tên nguồn người đọc hiểu được ("Nguồn: Lục Nhâm Đại Toàn, Q2"). Mã chi tiết để tra lại giữ trong mã nguồn hoặc tài liệu nội bộ, hiển thị qua hàm rút gọn nếu dữ liệu đang lưu mã.
+- **Cảnh báo giới hạn ảnh hưởng tới quyết định của người dùng** (ngưỡng tự đặt, phần chưa tính) thì viết lại theo giọng trung tính, không ẩn hẳn: "Ngưỡng 30% là quy ước, chưa có nguồn sách."
+
+| Đúng | Sai |
+|---|---|
+| Chưa xét tháng. | App chưa xét tháng. |
+| Nguồn: Bài giảng Phong thủy Đại Nam | Nguồn: PTĐN Ep17 @13:01–16:06 |
+| Ngưỡng 30% là quy ước, chưa có nguồn sách. | Ngưỡng bạn chọn ngày 04/11/2026, chờ thầy chốt. |
+| *(bỏ)* | Bản dịch của app (Claude), chưa đối chiếu bản in. |
+| *(bỏ)* | Xem docs/features.md mục 3. |
+
+Khi rà soát mà ẩn một câu, chép nguyên văn câu đó cùng vị trí vào một file trong repo (ví dụ `docs/ux-copy-review.md`) và nêu trong báo cáo, để chủ sản phẩm quyết định viết lại hay bỏ hẳn. Không xóa im lặng: những câu này thường là giới hạn thật của sản phẩm.
+
 ## Form: nhãn, placeholder, lỗi nhập
 
 - Nhãn là danh từ ngắn: "Họ và tên", "Số điện thoại", "Ngày sinh".
 - Placeholder là ví dụ hoặc ghi chú ("Bắt buộc", "Ví dụ: 0912 345 678"), không thay cho nhãn.
 - Lỗi nhập nêu yêu cầu đúng: "Mật khẩu cần có ít nhất 8 ký tự." thay cho "Mật khẩu không hợp lệ".
-- Câu hướng dẫn dùng mệnh lệnh nhẹ: "Chọn ít nhất một phương thức nhận hàng."
+- Câu hướng dẫn dùng mệnh lệnh nhẹ: "Chọn ít nhất một phương thức nhận hàng." Không thêm "Vui lòng" vào hướng dẫn trung tính; dành "Vui lòng" cho lời đề nghị sau một lỗi hoặc khi yêu cầu người dùng làm việc ngoài luồng chính.
 
 ## Thông báo đẩy và nhắc nhở
 

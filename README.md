@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/jasonlaidev/vietnamese-ux-writing/actions/workflows/ci.yml/badge.svg)](https://github.com/jasonlaidev/vietnamese-ux-writing/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-informational.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.1.0-informational.svg)](CHANGELOG.md)
 
 An agent skill for professional Vietnamese UX writing in web and mobile apps.
 

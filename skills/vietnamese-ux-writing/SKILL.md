@@ -4,7 +4,7 @@ description: Professional Vietnamese UX writing for web and mobile apps. Use whe
 license: MIT
 metadata:
   author: jasonlaidev
-  version: "1.0.0"
+  version: "1.1.0"
   language: vi
 ---
 
@@ -24,12 +24,13 @@ Văn bản pháp lý của sản phẩm (điều khoản sử dụng, chính sá
 
 ## Core Principles
 
-1. **Văn viết, không phải lời nói.** Câu phải đọc được trong tài liệu gửi đối tác. Người dùng đánh giá độ tin cậy của sản phẩm qua từng câu chữ; một câu khẩu ngữ trong thông báo lỗi làm cả app trông thiếu chỉn chu.
+1. **Văn viết, không phải lời nói, cũng không phải văn hành chính.** Câu phải đọc được trong tài liệu gửi đối tác. Người dùng đánh giá độ tin cậy của sản phẩm qua từng câu chữ; một câu khẩu ngữ trong thông báo lỗi làm cả app trông thiếu chỉn chu. Trang trọng không có nghĩa là dài: dùng từ thông dụng, câu ngắn, bỏ chữ không mang thông tin ("tiến hành", "thực hiện việc", "quá trình", "tính năng" khi không cần).
 2. **Đúng ý trước, trang trọng sau.** Chỉ đổi từ khi ý vẫn đúng. Đổi "Hết hàng" thành "Sản phẩm ngừng kinh doanh" nghe trang trọng hơn nhưng sai ý: hết hàng là tạm thời, ngừng kinh doanh là không bán nữa.
-3. **Không hứa tuyệt đối.** Tránh "không giới hạn", "miễn phí vĩnh viễn", "luôn chính xác". Cam kết trên giao diện phải khớp điều khoản và hợp đồng, vì người dùng có thể dùng nó làm căn cứ khiếu nại.
+3. **Không hứa tuyệt đối.** Tránh "không giới hạn", "miễn phí vĩnh viễn", "luôn chính xác". Cam kết trên giao diện phải khớp điều khoản và hợp đồng, vì người dùng có thể dùng nó làm căn cứ khiếu nại. Gặp câu hứa tuyệt đối thì sửa về mức nói được ngay và ghi vào báo cáo để chủ sản phẩm xác nhận; không để nguyên chờ duyệt. Quy tắc "để chủ sản phẩm quyết định" ở nguyên tắc 7 chỉ dành cho thuật ngữ sản phẩm.
 4. **Nói điều sẽ xảy ra, không nói người dùng nên cảm thấy gì.** "Dữ liệu mẫu, không được lưu" thay cho "Yên tâm, đăng nhập lúc nào cũng được nhé". Lời trấn an và từ đệm ("nhé", "đừng lo", "thoải mái") là dấu hiệu dễ nhận ra của văn AI.
-5. **Câu đủ ý, cấu trúc song song.** Thông báo lỗi nêu việc gì thất bại và người dùng làm gì tiếp. Câu trả lời FAQ trả lời thẳng câu hỏi, không chỉ dẫn sang trang khác. Các mục trong cùng danh sách hoặc hai cột so sánh dùng cùng cấu trúc ngữ pháp.
+5. **Câu đủ ý, cấu trúc song song.** Thông báo lỗi nêu việc gì thất bại và người dùng làm gì tiếp. Mẫu mặc định là "Không thể …"; các dạng nêu kết quả như "Không tìm thấy tệp", "Không đủ dung lượng", "Không có kết nối mạng" cũng đúng, giữ nguyên khi gặp. Câu trả lời FAQ trả lời thẳng câu hỏi, không chỉ dẫn sang trang khác. Các mục trong cùng danh sách hoặc hai cột so sánh dùng cùng cấu trúc ngữ pháp.
 6. **Không nói quá.** Không dùng lời khen rỗng ("tuyệt vời", "đột phá", "tối ưu") khi không có số liệu đi kèm.
+7. **Sửa có lý do, không sửa để đổi chữ.** Sửa khi chuỗi có khẩu ngữ, sai nghĩa, sai chính tả hoặc quy ước, thiếu ý, hoặc mang dấu vết dịch sát chữ: câu bị động thừa ("Báo cáo được tạo bởi quản trị viên" → "Báo cáo do quản trị viên tạo"), "của", "các", "một" thừa ("Ảnh của hồ sơ" → "Ảnh hồ sơ"), lời rào đón thừa ("Rất tiếc, đơn hàng này không thể hủy" → "Không thể hủy đơn hàng này"). Không sửa chuỗi đã rõ và tự nhiên chỉ để thay bằng từ đồng nghĩa. Nguyên tắc này không che chắn cho khẩu ngữ: từ trong `references/word-replacements.md` luôn phải sửa, kể cả trong câu hỏi FAQ hoặc khi câu vẫn hiểu được; lỗi nhập chỉ nói "không hợp lệ" luôn được viết lại để nêu yêu cầu đúng ("Mật khẩu cần có ít nhất 8 ký tự"). Khi sửa, không thêm chữ không mang thông tin và không thêm ý mà câu gốc không có. Không tự đổi thuật ngữ sản phẩm đang dùng nhất quán (tên màn hình, tên tính năng): nếu thấy nên đổi, ghi vào báo cáo để chủ sản phẩm quyết định. Khi có câu gốc tiếng Anh, đối chiếu để giữ đúng nghĩa trong ngữ cảnh của sản phẩm đó.
 
 ## Quick Reference
 
@@ -39,13 +40,17 @@ Các lỗi thường gặp nhất. Bảng đầy đủ nằm trong `references/`
 |---|---|---|
 | Chưa xóa được | Không thể xóa | Thông báo lỗi nêu kết quả, không hẹn "chưa" |
 | Kiểm tra mạng rồi thử lại. | Vui lòng kiểm tra kết nối mạng và thử lại. | Câu đầy đủ, lịch sự |
-| Không thể xóa | Không thể xóa. Vui lòng thử lại. | Thông báo lỗi luôn kèm bước tiếp theo |
+| Không thể xóa (toast lỗi) | Không thể xóa. Vui lòng thử lại. | Thông báo lỗi đứng một mình kèm bước tiếp theo |
+| Vui lòng chọn ngày giao hàng | Chọn ngày giao hàng | Hướng dẫn trung tính không cần "Vui lòng" |
+| Đang tiến hành quá trình đồng bộ | Đang đồng bộ | "tiến hành", "quá trình" không thêm thông tin |
 | Nhập giao dịch bằng tay | Nhập giao dịch thủ công | "bằng tay" là khẩu ngữ |
 | Trả một lần, dùng mãi | Thanh toán một lần, dùng không thời hạn | "mãi" là khẩu ngữ |
 | Đơn chốt rồi không sửa được | Đơn hàng đã xác nhận không thể chỉnh sửa | "chốt" là khẩu ngữ |
 | Muốn hủy: vào Cài đặt | Để hủy: vào Cài đặt | "Muốn" là lời nói |
 | Chính Sách Quyền Riêng Tư | Chính sách quyền riêng tư | Tiếng Việt chỉ viết hoa chữ đầu câu và tên riêng |
 | xoá, huỷ, khoẻ | xóa, hủy, khỏe | Một kiểu đặt dấu cho cả dự án |
+| App chưa xét tháng | Chưa xét tháng | Sản phẩm không tự xưng trong nội dung |
+| Bản dịch của app (Claude); chờ duyệt; xem docs/… | *(ẩn, ghi vào file review)* | Ghi chú nội bộ không hiện cho người dùng |
 
 ## Workflow
 
@@ -68,6 +73,7 @@ Các lỗi thường gặp nhất. Bảng đầy đủ nằm trong `references/`
    Chuỗi nằm ở nơi script không đọc (CMS, cơ sở dữ liệu, file thiết kế) thì cần lấy từ nguồn đó; ghi rõ trong báo cáo phần nào chưa được rà.
 
    **Không bỏ sót vì output dài.** Không cắt dòng (`cut -c`, `awk substr`, `head`) và không tự loại file lớn khỏi danh sách: chuỗi dài nhất (đoạn giải thích, nội dung mẹo, thông báo) thường là chỗ có nhiều lỗi nhất. Ghi output ra file và đọc hết theo từng đoạn (đọc theo offset/limit). Một dòng mã chứa cả JSX dài thì in nguyên dòng đó từ file gốc. File sinh tự động từ dữ liệu (nội dung mẹo, dữ liệu mẫu) vẫn phải rà, nhưng sửa ở file nguồn và chạy lại bước sinh.
+   Với file dịch hoặc danh sách chuỗi, mỗi chỗ sửa phải có lý do ghi được vào cột "Lý do" (khẩu ngữ, sai nghĩa, dịch sát chữ, thừa chữ, sai quy ước). Chuỗi không có lý do nào như vậy thì giữ nguyên.
 2. **Xác định phần đang hiển thị.** Component bị comment hoặc không được render thì ghi chú là đang ẩn.
 3. **Đọc từng dòng**, gồm cả metadata, nhãn trợ năng (`aria-label`, `accessibilityLabel`, `contentDescription`, `semanticsLabel`), placeholder, thông báo lỗi, trạng thái thành công, nội dung thông báo đẩy và dữ liệu demo. Với nội dung giải thích (mẹo, hướng dẫn, FAQ), đối chiếu các con số và ngưỡng giữa các màn hình: cùng một chỉ số mà hai nơi ghi khác nhau thì người dùng không biết tin nơi nào.
 4. **Báo cáo** theo định dạng ở mục Output Format. Nếu người dùng chỉ yêu cầu review thì dừng ở bước này, chưa sửa file.
@@ -75,6 +81,8 @@ Các lỗi thường gặp nhất. Bảng đầy đủ nằm trong `references/`
    - Chạy lại script tìm chuỗi để chắc chắn không còn từ cũ.
    - Chạy `bash scripts/check-tone-marks.sh [thư mục…]` nếu dự án dùng kiểu đặt dấu mới.
    - Chạy bước kiểm tra sẵn có của dự án (typecheck, lint, test, build). Test có thể so khớp nguyên văn chuỗi; cập nhật kỳ vọng trong test cho khớp với copy mới.
+   - Fixture hoặc snapshot chụp từ hệ thống bên ngoài (response API, dữ liệu đối chiếu) thì không sửa tay theo quy ước mới; chuẩn hóa lúc test đọc fixture (ví dụ đổi kiểu đặt dấu trước khi so) để fixture vẫn là bản gốc.
+   - Câu bị ẩn (ghi chú nội bộ, lời tự xưng của sản phẩm) phải có trong file review của repo, xem mục "Ghi chú nguồn, giới hạn và ghi chú nội bộ" trong `references/microcopy-patterns.md`.
    - Với file dịch (`strings.xml`, `.strings`, `.arb`, `.po`), giữ nguyên key, placeholder (`%s`, `%1$d`, `{name}`) và ký tự cần escape (`\'` trong Android).
    - Xem lại màn hình ở chiều rộng 320 px nếu câu mới dài hơn đáng kể trong nút hoặc bảng.
 
